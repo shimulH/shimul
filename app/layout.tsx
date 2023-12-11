@@ -1,9 +1,7 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { roboto_mono } from '@/app/ui/fonts';
 import './globals.css';
 import Header from '@/app/ui/header';
-
-const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Shimul | Portfolio',
@@ -18,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`${inter.className} bg-orange-50 bg-[url('../public/grain.png')] bg-blend-multiply`}
+        className={`${roboto_mono.className} antialiased bg-slate-950 text-white bg-[url('../public/grain.png')] bg-blend-multiply`}
       >
         <Header />
         {children}
